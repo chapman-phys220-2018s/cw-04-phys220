@@ -1,22 +1,17 @@
 # PHYS220 CW 4
 
-**Author(s):** _\<your name(s)\>_
+**Author(s):** **CHANGEME**
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-04-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-04-YOURNAME)
-
-**Due date:** 2016/09/27
+[![Build Status](https://travis-ci.org/chapman-phys220-2017f/cw-04-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2017f/cw-04-YOURNAME)
 
 ## Specification
 
-Complete the following exercises from the primary textbook, placing your solutions into separate files. In each file, write the solution as a callable function, so that you can write suitable test functions that demonstrate correct output using the nose framework. GitHub will automatically run your tests on every commit, indicating any failures via the Travis framework with build status above.
+1. With your partner, go through the [slides](http://slides.com/profdressel/numpy-and-pandas-overview/) that introduce the `numpy` and `pandas` libraries and how to use them. Use the Jupyter notebook `slides.ipynb` in the current repository to test code as you read through slides to make sure you understand.
+1. With your partner, go through the python code in the repository showing the reference list implementation of the Gaussian function: $$g(x) = \frac{1}{\sqrt{2\pi}} \exp\left( -\frac{x^2}{2} \right).$$ Make sure you understand how the python module is formatted, how its command line arguments are used, how docstrings work and connect to the python help system, how the testing functions work, and how to load the code and use it in the notebook. Verify that running `nosetests3` in a terminal runs the tests and produces output you expect.
+1. Complete the `numpy` array implementation of the Gaussian function in the module and verify its tests work. Plot the function in the notebook to verify it reproduces the list. Benchmark the performance in the notebook and compare it to the performance of the reference list implementation. Hint: Use array vectorization, meaning avoid all explicit for loops in favor of functions inside `numpy` that automatically distribute (map over) arrays.
+1. Create both list and array implementations of the "sinc" function: $$ \text{sinc}(x) = \frac{\sin(x)}{x}.$$ Follow the style of the Gaussian function implementations for reference. Plot and benchmark the implementations in the notebook. Comment on how many points are needed per period of the "sinc" to obtain an accurate plot.
+1. Create both list and array implementations of a frequency-chirped sine wave: $$\text{sinf}(x) = \sin\left(\frac{1}{x}\right).$$ What difficulties are there in implementing this function? Comment on the how many points per period will be necessary to obtain an accurate plot.
 
-Note: Use your best judgment for how to properly organize your code into functions and modules. Use the problems as guidelines for the idea, but write the best code you can. Plot only in Jupyter, loading modules of .py files as needed.
-
-1. Exercise A.1 (```sequence_limits.py```)
-1. Exercise A.2 (```pi_sequences.py```)
-1. Exercise A.12 (```diffeq_midpoint.py```)
-
-Finally, to cleanly present your work, create a Jupyter notebook ```cw4.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
 
 Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
