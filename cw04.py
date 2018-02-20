@@ -61,7 +61,7 @@ def gen_gaussian_array(a, b, n=1000):
     x = np.linspace(a,b,1000)
 
     def gauss(x):
-        return (1/math.sqrt(2*math.pi))*math.exp(-x**2/2)
+        return (1/np.sqrt(2*np.pi))*np.exp(-x**2/2)
 
     g = np.gauss(x)
     return (x, g)
