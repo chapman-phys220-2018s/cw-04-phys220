@@ -21,12 +21,12 @@ def gen_gaussian_list(a, b, n=1000):
     """gen_gaussian_list(a, b, n=1000)
     Generate a discrete approximation of a Gaussian function, including its
     domain and range, stored as a pair of vanilla python lists.
-    
+
     Args:
         a (float) : Lower bound of domain
         b (float) : Upper bound of domain
         n (int, optional) : Number of points in domain, defaults to 1000.
-    
+
     Returns:
         (x, g) : Pair of lists of floats
             x  : [a, ..., b] List of n equally spaced floats between a and b
@@ -34,11 +34,11 @@ def gen_gaussian_list(a, b, n=1000):
     """
     dx = (b-a)/(n-1)                         # spacing between points
     x = [a + k*dx for k in range(n)]         # domain list
-    
+
     # Local implementation of a Gaussian function
     def gauss(x):
         return (1/math.sqrt(2*math.pi))*math.exp(-x**2/2)
-    
+
     g = [gauss(xk) for xk in x]                  # range list
     return (x, g)
 
@@ -47,32 +47,37 @@ def gen_gaussian_array(a, b, n=1000):
     """gen_gaussian_array(a, b, n=1000)
     Generate a discrete approximation of a Gaussian function, including its
     domain and range, stored as a pair of numpy arrays.
-    
+
     Args:
         a (float) : Lower bound of domain
         b (float) : Upper bound of domain
         n (int, optional) : Number of points in domain, defaults to 1000.
-    
+
     Returns:
         (x, g) : Pair of numpy arrays of float64
             x  : [a, ..., b] Array of n equally spaced float64 between a and b
             g  : [g(a), ..., g(b)] Array of Gaussian values matched to x
     """
-    pass
+    x = np.linspace(a,b,1000)
 
+    def gauss(x):
+        return (1/math.sqrt(2*math.pi))*math.exp(-x**2/2)
+
+    g = np.gauss(x
+    return (x, g)
 
 def main(a,b,n=1000):
     """main(a, b, n=1000)
     Main function for command line operation. Prints result of Gaussian to screen.
-    
+
     Args:
         a (float) : Lower bound of domain
         b (float) : Upper bound of domain
         n (int, optional) : Number of points in domain, defaults to 1000.
-    
+
     Returns:
         None
-    
+
     Effects:
         Prints Gaussian to screen.
     """
