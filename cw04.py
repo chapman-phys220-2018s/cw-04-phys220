@@ -87,7 +87,14 @@ def gen_sinc_list(a,b,n=1000):
             s  : [s(a), ..., s(b)] List of sinc values matched to x
     """
 
+    dx = (b-a)/(n-1)
+    x = [a + k*dx for k in range(n)]
+
     def sinc(x):
+        return math.sin(x)/x
+
+    sc = [sinc(xk) for xk in x]
+    return (x, sc)
 
 
 def gen_sinc_array(a, b, n=1000):
@@ -105,8 +112,13 @@ def gen_sinc_array(a, b, n=1000):
             x  : [a, ..., b] Array of n equally spaced float64 between a and b
             s  : [s(a), ..., s(b)] Array of sinc values matched to x
     """
+    x = np.linspace(a,b,1000)
 
     def sinc(x):
+        return np.sin(x)/x
+
+    sc = np.sinc(x)
+    return (x,sc)
 
 
     def gen_sinf_list(a, b, n=1000):
@@ -125,8 +137,14 @@ def gen_sinc_array(a, b, n=1000):
             s  : [s(a), ..., s(b)] List of sinf values matched to x
     """
 
-    def sinf(x):
+    dx = (b-a)/(n-1)
+    x = [a + k*dx for k in range(n)]
 
+    def sinf(x):
+        return math.sin(1/x)
+
+    sf = [sinf(xk) for xk in x]
+    return (x, sf)
 
 def gen_sinf_array(a, b, n=1000):
      """gen_sinc_array(a, b, n=1000)
@@ -144,7 +162,13 @@ def gen_sinf_array(a, b, n=1000):
             s  : [s(a), ..., s(b)] Array of sinf values matched to x
     """
 
+    x = np.linspace(a,b,1000)
+
     def sinf(x):
+        return np.sin(1/x)
+
+    sf = np.sinf(x)
+    return (x,sf)
 
 
 def main(a,b,n=1000):
