@@ -147,9 +147,25 @@ def gen_sinf_list(a, b, n=1000):
     return (x, sf)
 
 def gen_sinf_array(a, b, n=1000):
+    """gen_sinf_array(a, b, n=1000)
+    Generate a discrete approximation of a sinf function, including its
+    domain and range, stored as numpy arrays.
+
+    Args:
+        a (float) : Lower bound of domain
+        b (float) : Upper bound of domain
+        n (int, optional) : Number of points in domain, defaults to 1000.
+
+    Returns:
+        (x, s) : Pair of numpy arrays of float64
+            x  : [a, ..., b] Array of n equally spaced float64 between a and b
+            s  : [s(a), ..., s(b)] Array of sinf values matched to x
+    """
     x = np.linspace(a,b,n)
+
     def sinf(x):
         return np.sin(1/x)
+
     sf = np.array(sinf(x))
     return (x,sf)
 
