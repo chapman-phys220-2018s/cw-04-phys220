@@ -62,12 +62,12 @@ def gen_gaussian_array(a, b, n=1000):
             x  : [a, ..., b] Array of n equally spaced float64 between a and b
             g  : [g(a), ..., g(b)] Array of Gaussian values matched to x
     """
-    x = np.linspace(a,b,1000)
+    x = np.linspace(a,b,n)
 
     def gauss(x):
         return (1/np.sqrt(2*np.pi))*np.exp(-x**2/2)
 
-    g = np.gauss(x)
+    g = np.array(gauss(x))
     return (x, g)
 
 
@@ -112,16 +112,16 @@ def gen_sinc_array(a, b, n=1000):
             x  : [a, ..., b] Array of n equally spaced float64 between a and b
             s  : [s(a), ..., s(b)] Array of sinc values matched to x
     """
-    x = np.linspace(a,b,1000)
+    x = np.linspace(a,b,n)
 
     def sinc(x):
         return np.sin(x)/x
 
-    sc = np.sinc(x)
+    sc = np.array(sinc(x))
     return (x,sc)
 
 
-    def gen_sinf_list(a, b, n=1000):
+def gen_sinf_list(a, b, n=1000):
     """gen_sinf_list(a, b, n=1000)
     Generate a discrete approximation of a sinf function, including its
     domain and range, stored as a pair of vanilla python lists.
@@ -147,27 +147,10 @@ def gen_sinc_array(a, b, n=1000):
     return (x, sf)
 
 def gen_sinf_array(a, b, n=1000):
-     """gen_sinc_array(a, b, n=1000)
-    Generate a discrete approximation of a sinf function, including its
-    domain and range, stored as a pair of numpy arrays.
-
-    Args:
-        a (float) : Lower bound of domain
-        b (float) : Upper bound of domain
-        n (int, optional) : Number of points in domain, defaults to 1000.
-
-    Returns:
-        (x, s) : Pair of numpy arrays of float64
-            x  : [a, ..., b] Array of n equally spaced float64 between a and b
-            s  : [s(a), ..., s(b)] Array of sinf values matched to x
-    """
-
-    x = np.linspace(a,b,1000)
-
+    x = np.linspace(a,b,n)
     def sinf(x):
         return np.sin(1/x)
-
-    sf = np.sinf(x)
+    sf = np.array(sinf(x))
     return (x,sf)
 
 
@@ -217,3 +200,16 @@ if __name__ == "__main__":
         print("  n : integer, number of points in domain")
         exit(1)
 
+    """gen_sinc_array(a, b, n=1000)
+    Generate a discrete approximation of a sinf function, including its
+    domain and range, stored as a pair of numpy arrays.
+
+    Args:
+        a (float) : Lower bound of domain
+        b (float) : Upper bound of domain
+        n (int, optional) : Number of points in domain, defaults to 1000.
+
+    Returns:
+        (x, s) : Pair of numpy arrays of float64
+            x  : [a, ..., b] Array of n equally spaced float64 between a and b
+            s  : [s(a), ..., s(b)] Array of sinf values matched to x """

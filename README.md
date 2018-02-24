@@ -2,7 +2,7 @@
 
 **Author(s):** **Daniel**
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2017f/cw-04-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2017f/cw-04-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2018s/cw-04-phys220.svg?branch=master)](https://travis-ci.org/chapman-phys220-2018s/cw-04-phys220)
 
 ## Specification
 
