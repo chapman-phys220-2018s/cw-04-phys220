@@ -1,6 +1,6 @@
 # PHYS220 CW 4
 
-**Author(s):** **Daniel**
+**Author(s):** **Daniel, Myranda**
 
 [![Build Status](https://travis-ci.org/chapman-phys220-2018s/cw-04-phys220.svg?branch=master)](https://travis-ci.org/chapman-phys220-2018s/cw-04-phys220)
 
@@ -30,4 +30,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**Daniel**
+**Daniel, Myranda**
