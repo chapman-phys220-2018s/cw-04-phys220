@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+###
 #Daniel Chang
 #2260161
 #Chang254@mail.chapman.edu
@@ -12,6 +13,7 @@
 #dball@chapman.edu
 #PHYS220 Spring 2018
 #CW04 Exercise 2
+###
 
 """Classwork 04
 This classwork introduces numpy arrays and compares their performance to
