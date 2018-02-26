@@ -93,7 +93,10 @@ def gen_sinc_list(a,b,n=1000):
     x = [a + k*dx for k in range(n)]
 
     def sinc(x):
-        return math.sin(x)/x
+        if x==0:
+            return 1
+        else:
+            return (math.sin(x)/x)
 
     sc = [sinc(xk) for xk in x]
     return (x, sc)
@@ -117,7 +120,10 @@ def gen_sinc_array(a, b, n=1000):
     x = np.linspace(a,b,n)
 
     def sinc(x):
-        return np.sin(x)/x
+        if x==0:
+            return 1
+        else:
+            return (math.sin(x)/x)
 
     sc = np.array(sinc(x))
     return (x,sc)
