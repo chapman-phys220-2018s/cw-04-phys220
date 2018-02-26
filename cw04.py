@@ -217,17 +217,3 @@ if __name__ == "__main__":
         print("  b : float, upper bound of domain")
         print("  n : integer, number of points in domain")
         exit(1)
-
-    """gen_sinc_array(a, b, n=1000)
-    Generate a discrete approximation of a sinf function, including its
-    domain and range, stored as a pair of numpy arrays.
-
-    Args:
-        a (float) : Lower bound of domain
-        b (float) : Upper bound of domain
-        n (int, optional) : Number of points in domain, defaults to 1000.
-
-    Returns:
-        (x, s) : Pair of numpy arrays of float64
-            x  : [a, ..., b] Array of n equally spaced float64 between a and b
-            s  : [s(a), ..., s(b)] Array of sinf values matched to x """
