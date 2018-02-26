@@ -120,12 +120,9 @@ def gen_sinc_array(a, b, n=1000):
     x = np.linspace(a,b,n)
 
     def sinc(x):
-        if x==0:
-            return 1
-        else:
-            return (math.sin(x)/x)
+        return (math.sin(x)/x)
 
-    sc = np.array(sinc(x))
+    sc = np.array(sinc)
     return (x,sc)
 
 
