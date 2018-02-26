@@ -1,6 +1,6 @@
 # PHYS220 CW 4
 
-**Author(s):** **Daniel, Myranda**
+**Author(s):** **Daniel, Myranda, Devon**
 
 [![Build Status](https://travis-ci.org/chapman-phys220-2018s/cw-04-phys220.svg?branch=master)](https://travis-ci.org/chapman-phys220-2018s/cw-04-phys220)
 
