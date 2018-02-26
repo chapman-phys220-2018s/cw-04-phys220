@@ -149,7 +149,10 @@ def gen_sinf_list(a, b, n=1000):
     x = [a + k*dx for k in range(n)]
 
     def sinf(x):
-        return math.sin(1/x)
+        if x==0:
+            return 1
+        else:
+            return math.sin(1/x)
 
     sf = [sinf(xk) for xk in x]
     return (x, sf)
@@ -172,7 +175,10 @@ def gen_sinf_array(a, b, n=1000):
     x = np.linspace(a,b,n)
 
     def sinf(x):
-        return np.sin(1/x)
+        if x==0:
+            return 1
+        else:
+            return np.sin(1/x)
 
     sf = np.array(sinf(x))
     return (x,sf)
