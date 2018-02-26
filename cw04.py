@@ -172,12 +172,9 @@ def gen_sinf_array(a, b, n=1000):
     x = np.linspace(a,b,n)
 
     def sinf(x):
-        if x==0:
-            return 1
-        else:
-            return np.sin(1/x)
+        return math.sin(1/x)
 
-    sf = np.array(sinf(x))
+    sf = np.array(sinf)
     return (x,sf)
 
 
