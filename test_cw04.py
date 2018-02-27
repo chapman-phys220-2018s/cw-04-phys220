@@ -82,7 +82,7 @@ def test_sinf_list():
     using the reference list implementation.
     """
     x,sf = cw04.gen_sinc_list(-1,1,3)
-    desired = [-0.8414709848078965, 1.0, 0.8414709848078965]
+    desired = [-0.8414709848078965, 1.000000, 0.8414709848078965]
     print("Obtained:",sf)
     print("Desired:",desired)
     # For comparing floating point values, nose has useful helper functions
@@ -95,7 +95,7 @@ def test_sinf_array():
     using the numpy array implementation.
     """
     x,sf = cw04.gen_sinf_array(-1,1,3)
-    desired = [-0.8414709848, 1.0, 0.8414709848]
+    desired = [-0.8414709848, 1.000000, 0.8414709848]
     print("Obtained:",sf)
     print("Desired:",desired)
     # For comparing floating point values, nose has useful helper functions
