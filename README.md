@@ -19,7 +19,7 @@ Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recomme
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-**CHANGEME**
+**I liked that we had to create list and array versions of each function because it helped a lot with understanding how to first approach the problems with a familiar method, but then we had to use a new unfamiliar method as well to get used to arrays. -Daniel**
 
 ## Honor Pledge
 
