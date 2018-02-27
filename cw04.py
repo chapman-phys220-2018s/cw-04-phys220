@@ -94,7 +94,7 @@ def gen_sinc_list(a,b,n=1000):
 
     def sinc(x):
         if x==0:
-            return 1
+            return 1.0
         else:
             return (math.sin(x)/x)
 
@@ -147,7 +147,7 @@ def gen_sinf_list(a, b, n=1000):
 
     def sinf(x):
         if x==0:
-            return 1
+            return 1.0
         else:
             return math.sin(1/x)
 
