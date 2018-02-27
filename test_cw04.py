@@ -67,13 +67,13 @@ def test_sinc_array():
     Tests whether sinc values are correct for domain points -1, 0, and 1,
     using the numpy array implementation.
     """
-    x,sf = cw04.gen_sinc_array(-1,1,3)
-    desired = [0.8414709848078965, 1.0 , 0.8414709848078965]
-    print("Obtained:",sf)
+    x,sc = cw04.gen_sinc_array(1,3,3)
+    desired = ([0.8414709848078965, .45464871 , 0.04704000])
+    print("Obtained:",sc)
     print("Desired:",desired)
     # For comparing floating point values, nose has useful helper functions
     # to ensure they are equal up to a numerical precision tolerance
-    nose.tools.assert_almost_equal(sf, desired)
+    np.testing.assert_almost_equal(sc, desired)
 
 
 def test_sinf_list():
@@ -81,7 +81,7 @@ def test_sinf_list():
     Tests whether sinf(x) values are correct for domain points -1, 0, and 1,
     using the reference list implementation.
     """
-    x,sf = cw04.gen_sinc_list(-1,1,3)
+    x,sf = cw04.gen_sinf_list(-1,1,3)
     desired = [-0.8414709848078965, 1.000000, 0.8414709848078965]
     print("Obtained:",sf)
     print("Desired:",desired)
@@ -94,11 +94,11 @@ def test_sinf_array():
     Tests whether sinf(x) values are correct for domain points -1, 0, and 1,
     using the numpy array implementation.
     """
-    x,sf = cw04.gen_sinf_array(-1,1,3)
-    desired = [-0.8414709848, 1.000000, 0.8414709848]
+    x,sf = cw04.gen_sinf_array(1,3,3)
+    desired = ([0.8414709848,.47942554,.32719470])
     print("Obtained:",sf)
     print("Desired:",desired)
     # For comparing floating point values, nose has useful helper functions
     # to ensure they are equal up to a numerical precision tolerance
-    nose.tools.assert_almost_equal(sf, desired)
+    np.testing.assert_almost_equal(sf, desired)
 

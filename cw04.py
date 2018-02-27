@@ -120,9 +120,9 @@ def gen_sinc_array(a, b, n=1000):
     x = np.linspace(a,b,n)
 
     def sinc(x):
-        return (math.sin(x)/x)
+        return (np.sin(x)/x)
 
-    sc = np.array(sinc)
+    sc = np.array(sinc(x))
     return (x,sc)
 
 
@@ -172,9 +172,9 @@ def gen_sinf_array(a, b, n=1000):
     x = np.linspace(a,b,n)
 
     def sinf(x):
-        return math.sin(1/x)
+        return np.sin(1/x)
 
-    sf = np.array(sinf)
+    sf = np.array(sinf(x))
     return (x,sf)
 
 
